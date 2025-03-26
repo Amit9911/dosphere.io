@@ -46,26 +46,79 @@
             color: #3498db;
         }
 
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
         /* Hero Section */
         .hero {
-            height: 100vh;
-            background: url('https://source.unsplash.com/random/1600x900/?travel') no-repeat center/cover;
-            display: flex;
+            height: auto;
+            
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+           gap: 50px;
+           padding: 20px;
+
+
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
+            
+            color: rgba(25, 5, 5, 0.484);
             margin-top: 60px;
         }
-        .hero-content h2 {
-            font-size: 3rem;
+
+
+        
+
+
+        .hero-content  {
+
+
+            width: 400px;
+
+            height: 200px;
+
+            font-size: 2rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
-        .hero-content p {
-            font-size: 1.2rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        .hero-content img {
+
+            width: 400px;
+            height: 200px;
+            object-fit: cover;
         }
+            
+            .hero-content h2 {
+
+                padding: 10px;
+
+                text-align: left;
+                font-size: 20px;
+
+
+            }
+
+
+            .hero-content p {
+
+
+                padding: 10px;
+                text-align: left;
+                font-size: 20px;
+
+
+            }
+
+
+
+        
 
         /* Featured Posts Section */
         .featured {
@@ -116,14 +169,37 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+
+            .hamburger {
+
+                display: block;
+            }
             .nav-links {
                 display: none; /* Add a hamburger menu in real implementation */
+                flex-direction: column;
+
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #2c3e50;
+                padding: 1rem;
+                text-align: center;
             }
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 1rem 0 ;
+            }
+
+
             .hero-content h2 {
                 font-size: 2rem;
             }
             .hero-content p {
-                font-size: 1rem;
+                font-size: 2rem;
             }
         }
     </style>
@@ -133,6 +209,7 @@
     <header>
         <nav>
             <h1>The Obscure India</h1>
+            <button class="hamburger">☰</button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#destinations">Destinations</a></li>
@@ -145,9 +222,42 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h2>Explore the World</h2>
-            <p>Join me on an adventure through stunning destinations and hidden gems.</p>
+
+            <img src="https://images.pexels.com/photos/7365981/pexels-photo-7365981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="mahabalipuram temple">
+            
+
+                <h2>The Ancient Mahabalipuram Temple</h2>
+                <p> My Blogpost</p>
+            
+            
         </div>
+
+        <div class="hero-content">
+
+        <img src="https://media.istockphoto.com/id/1135788848/photo/snow-at-patnitop-jammu.jpg?s=1024x1024&w=is&k=20&c=r7uiapxNo2nknkvsiXY0-JJ6aiPS0N-94623QKj1vz8=">
+
+       
+
+            <h2>The snow-at-patnitop-jammu</h2>
+            <p> My Blogpost</p>
+
+        
+        </div>
+
+
+        <div class="hero-content">
+
+            <img src="https://images.pexels.com/photos/29517656/pexels-photo-29517656/free-photo-of-majestic-view-of-khajuraho-temple-under-clear-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+
+            
+                <h2>khajuraho</h2>
+            <p> My Blogpost</p>
+            
+
+        </div>
+
+
+
     </section>
 
     <!-- Featured Posts Section -->
@@ -155,21 +265,21 @@
         <h2>Featured Adventures</h2>
         <div class="posts-grid">
             <div class="post-card">
-                <img src="https://source.unsplash.com/random/300x200/?mountain" alt="Mountain">
+                <img src="https://images.pexels.com/photos/31293423/pexels-photo-31293423/free-photo-of-adventurous-ski-mountaineer-in-snowy-terrain.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mountain">
                 <div class="post-content">
-                    <h3>Hiking the Alps</h3>
+                    <h3>Hiking the Himalayas</h3>
                     <p>A breathtaking journey through snow-capped peaks and serene valleys.</p>
                 </div>
             </div>
             <div class="post-card">
-                <img src="https://source.unsplash.com/random/300x200/?beach" alt="Beach">
+                <img src="https://images.pexels.com/photos/31297190/pexels-photo-31297190/free-photo-of-fishermen-launching-boat-on-puducherry-beach-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Beach">
                 <div class="post-content">
                     <h3>Island Getaway</h3>
                     <p>Relaxing on pristine beaches with crystal-clear waters.</p>
                 </div>
             </div>
             <div class="post-card">
-                <img src="https://source.unsplash.com/random/300x200/?city" alt="City">
+                <img src="https://images.pexels.com/photos/2387874/pexels-photo-2387874.jpeg?auto=compress&cs=tinysrgb&w=600" alt="City">
                 <div class="post-content">
                     <h3>Urban Exploration</h3>
                     <p>Discovering the charm and chaos of vibrant city life.</p>
@@ -180,19 +290,48 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 My Travel Blog. All rights reserved.</p>
+        <p>&copy; 2025 The Obscure India. All rights reserved.</p>
     </footer>
 
     <script>
-        // Add smooth scrolling for navigation links
+
+const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+
+
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburger.textContent = '☰';
+                }
+
+
+
+                 
+       
+                });
             });
-        });
+        ;
+
+
+
+
+
+
+
+
     </script>
 </body>
 </html>
