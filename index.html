@@ -58,6 +58,24 @@
     <p>Compliance is maintained with India's <strong>Digital Personal Data Protection Act, 2023 (DPDP Act)</strong>, the <strong>General Data Protection Regulation (GDPR)</strong> where applicable, and <strong>Google Play Store requirements</strong>. The role of Data Fiduciary under the DPDP Act is fulfilled. The app is intended exclusively for users aged 18 years and older. No data is knowingly collected or processed from children under 18.</p>
   </section>
 
+
+<h2> Permissions and Device Access</h2>
+<p>To provide core functionality, the App requires access to specific device features. We only request permissions necessary for the features you choose to use:</p>
+<ul>
+    <li><strong>Notifications (POST_NOTIFICATIONS):</strong> We use this permission to send you reminders for tasks, maintain your habit streaks, and provide alerts for focus sessions (Pomodoro). You can withdraw this consent at any time via your device settings.</li>
+    <li><strong>Microphone (RECORD_AUDIO):</strong> We use this permission exclusively for the "Voice Journaling" feature. This allows the App to convert your spoken words into written text. Audio data is processed in real-time and is not stored on our servers or shared with third parties, except for the necessary conversion to text via system-level APIs, .</li>
+</ul>
+<p>You can manage or revoke these permissions at any time through your Android System Settings.</p>
+
+
+<h2>App Widget (Glance)</h2>
+<p>
+    Taskprayuj provides an App Widget feature that allows you to view your current tasks or habit streaks directly on your home screen. 
+    The widget accesses your <strong>local Room database</strong> to display this information. 
+    Data displayed on the widget is never transmitted to external servers specifically for the widget's functionality; 
+    it is processed entirely on-device to ensure privacy and speed.
+</p>
+
   <section>
     <h2>Data Collected</h2>
     <h3>Data provided by users:</h3>
@@ -65,7 +83,9 @@
       <li>Name, Email address and hashed password for authentication via Firebase Authentication.</li>
       <li>Tasks, habits, and journal entries stored locally on the device.</li>
     </ul>
+    
 
+    
     <h3>Data collected automatically (via Firebase and Google services):</h3>
     <ul>
       <li>Device information (model, OS version, app version, language, approximate country from IP).</li>
